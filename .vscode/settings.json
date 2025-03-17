@@ -1,0 +1,13 @@
+{
+    "azureFunctions.deploySubpath": ".",
+    "azureFunctions.scmDoBuildDuringDeployment": true,
+    "azureFunctions.pythonVenv": "${workspaceFolder}\\.venv",
+    "azureFunctions.projectLanguage": "Python",
+    "azureFunctions.projectRuntime": "~4",
+    "azureFunctions.projectLanguageModel": 2,
+    "debug.internalConsoleOptions": "neverOpen",
+    "python.defaultInterpreterPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+    "python.terminal.activateEnvironment": true,
+    "azureFunctions.validateFuncCoreTools": true,
+    "azureAutomation.directory.basePath": "c:\\Users\\AndresQuinteroCorrea"
+  }

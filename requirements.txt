@@ -1,0 +1,10 @@
+azure-functions>=1.10.0
+requests
+pysftp
+pyopenssl
+azure-storage-blob
+azure-identity
+azure-mgmt-sql
+azure-sql
+python-dotenv
+pyodbc

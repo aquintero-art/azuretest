@@ -1,0 +1,2038 @@
+Table Config_CoveragePlansSellerInclusion {
+  iId int
+  iCoverageId int
+  iSellerId int
+  iRateBookId int [null]
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  dFrom date [null]
+  dTo date [null]
+  iInstallmentGroupId int [null]
+  sDeductibleAmountExclusions varchar [null]
+  sDeductibleTypeExclusions varchar [null]
+  sClassExclusions varchar [null]
+  sTierExclusions varchar [null]
+  sTermMonthsMilesExclusions varchar [null]
+  sTermMonthsExclusions varchar [null]
+  sTermMilesExclusions varchar [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  iExpirationOdomNotToExceed int
+  iModelYearNotToExceed int
+  sLossCodesWithDefaultSelection varchar [null]
+  iMinimumSalesOdometer int
+  sSellerNumber varchar
+}
+
+Table Config_CoveragePlansTranslations {
+  iId int
+  dtActiveFrom smalldatetime [null]
+  dtActiveTo smalldatetime [null]
+  sCoverageDesc nvarchar
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  iProductTypeId int
+  sCoverageCode nvarchar [null]
+  sTpaCode varchar [null]
+  cMaxCoverageAmount money [null]
+  nMaxPartsMarkUpPercent decimal [null]
+  iEffectiveDateLeg int [null]
+  iOwnerId int [null]
+  sOwnerType nvarchar [null]
+  bOptionMode bit [null]
+  iOdomEligFrom int [null]
+  iOdomEligTo int [null]
+  sVehicleAgeType char [null]
+  bExpireContractOnPaidClaim bit
+  bEarningMaintenance bit
+  iEarningMainId int [null]
+  sFinanceTypeCode varchar [null]
+  cMinFinanceAmount money [null]
+  cMaxFinanceAmount money [null]
+  cMaxVehicleCost money [null]
+  nBenefitLimitPercentage decimal [null]
+  cInsuranceDeductibleLimit money [null]
+  nVehiclePriceFinanceRatio decimal [null]
+  nMaxAPR decimal [null]
+  btGapTermSameAsFinance bit [null]
+  cSuggestedRetailCost money [null]
+  cMaxMSRP money [null]
+  iProductTypeId1 int [null]
+  sReferenceCode varchar [null]
+  iMenuSortIndex int [null]
+  sExternalName nvarchar [null]
+  sPlanGroupCode nvarchar [null]
+  btUseExternalContractPdf bit
+  btDeductibleVaries bit
+  iVehicleClassificationId int
+  VehicleClassificationProfileCode nvarchar [null]
+  VehicleClassificationDesc nvarchar [null]
+  iEligibilityTierId int
+  EligibilityTiersRuleName varchar [null]
+  EligibilityTiersDesc varchar [null]
+  btTransferAllowed bit
+  cTransferFee money
+  iTaxProfileId int
+  iCoverageCategoryId int [null]
+  btRegulatedRetail bit [null]
+  btDiscountable bit [null]
+  cMinimumMarkup money [null]
+  cMaximumMarkup money [null]
+  iCoverageGroupId int [null]
+  sInsurerType varchar [null]
+  iInsurerId int [null]
+  sDOP char [null]
+  sPlanType varchar [null]
+  sEffectiveBasedOn varchar [null]
+  sCondition char [null]
+  iExclusionDays int [null]
+  sServiceLocation varchar [null]
+  sMSRP char [null]
+  cMinimumMSRP money [null]
+  cMaximumMSRP money [null]
+  sPaymentModal char [null]
+  iCancellationRuleId int
+  sTransferRule nvarchar [null]
+  iMaxNumberOfTransfers int [null]
+  iMaxProducts int
+  sEffectiveDateTypeCode varchar [null]
+  sExpireOdomTypeCode varchar [null]
+  sEffectiveOdomTypeCode varchar [null]
+  iEffectiveOdomLag int [null]
+  iCoverageReportGroupId int [null]
+  sEffectiveDateLagBy nvarchar [null]
+  sVehicleCategoryType varchar [null]
+  bInResetEarningId bit
+  bInspectionRequired bit [null]
+  iMileageCutOff int [null]
+  sManufacWarrantyEligible varchar [null]
+  cMinimumRetail money [null]
+  cMaximumRetail money [null]
+  iMinNumberServBalloon int [null]
+  iMinNumberServLease int [null]
+  iMinNumberServLoan int [null]
+  iMinNumberServCash int [null]
+  bNotCancellable bit
+  bCancellableOnlyByAdmin bit
+  btRegulatedRetailNotRR bit [null]
+  cClaimLimitPerContract money
+  bClaimVehiclePurchasePrice bit
+  bClaimFinancedAmount bit
+  sClaimWhicheverIs char [null]
+  btMaxMarkupOnMarkupProfile bit
+  nBenefitLimitPercentageClaim decimal
+  Translationid int [null]
+  sCultureCode varchar [null]
+  sTranslatedName nvarchar [null]
+}
+
+Table Config_CoverageRateDateRange {
+  iId int
+  sTpaCode varchar [null]
+  iCoverageID int
+  iCoverageRateDateRangeid int
+  sCoverageCode nvarchar [null]
+  sCoverageDesc nvarchar
+  dtFrom date
+  dtTo date [null]
+  sDescription nvarchar [null]
+  iRateBookId int
+  RatebookDesc nvarchar [null]
+  RatebookCode nvarchar [null]
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+}
+
+Table Config_DealStructures {
+  iId int
+  iSellerId int [null]
+  sSellerNumber varchar
+  iProductTypeId int [null]
+  sStructureTypeCode varchar [null]
+  dtSaleDateFrom smalldatetime [null]
+  dtSaleDateTo smalldatetime [null]
+  iInsertedUserId int [null]
+  dtInserted smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdated smalldatetime [null]
+}
+
+Table Config_DeductibleTypes {
+  iId int
+  iDeductibleType int [null]
+  sDeductibleCode varchar [null]
+}
+
+Table Config_EntityAgents {
+  iId int
+  sTpaCode varchar
+  sAgentNumber varchar
+  sAgentName nvarchar
+  sAgentStatus varchar
+  sFedTaxId nvarchar [null]
+  sContactFirstName nvarchar [null]
+  sContactLastName nvarchar
+  sContactMiddleName nchar [null]
+  sBillingAddress1 nvarchar [null]
+  sBillingAddress2 nvarchar [null]
+  sBillingCity nvarchar [null]
+  sBillingState nvarchar [null]
+  sBillingZipCode nvarchar [null]
+  iBillingCountryId int [null]
+  sMailingAddress1 nvarchar [null]
+  sMailingAddress2 nvarchar [null]
+  sMailingCity nvarchar [null]
+  sMailingState nvarchar [null]
+  sMailingZipCode nvarchar [null]
+  iMailingCountryId int [null]
+  sPhoneTypeCode1 varchar [null]
+  sPhoneNumber1 varchar [null]
+  sPhoneExt1 varchar [null]
+  sPhoneTypeCode2 varchar [null]
+  sPhoneNumber2 varchar [null]
+  sPhoneExt2 varchar [null]
+  sEmail nvarchar [null]
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  cLaborRate money [null]
+  nPartTax1 decimal [null]
+  nPartTax2 decimal [null]
+  nLaborTax1 decimal [null]
+  nLaborTax2 decimal [null]
+  sImageLogoUrl varchar [null]
+  bInternalCoverageOnly bit [null]
+  sSmtpUser nvarchar [null]
+  sSmtpPwd nvarchar [null]
+  sSmtpHost nvarchar [null]
+  iSmtpPort int [null]
+  bGenerateContractNumber bit [null]
+  sVehicleCategoryType varchar [null]
+  sClaimAdminEmail nvarchar [null]
+  sWebSiteUrl varchar [null]
+  iAgentTypeId int [null]
+  iCoverageRateProfileId int [null]
+  sBillingCounty nvarchar [null]
+  sMailingCounty nvarchar [null]
+  sPendBillTransOption nvarchar [null]
+  sContractActivateOnRemittanceOption nvarchar [null]
+  sContractIncludeVoidOnRemittanceOption nvarchar [null]
+  iCurrencyId int [null]
+  sWarrantyType varchar [null]
+  sCancellationNotifyEmail varchar [null]
+  sImageSecondLogoUrl varchar [null]
+  sAccountingNumber varchar [null]
+  dActivationDate date [null]
+  dTerminationDate date [null]
+  iPriceTableId int [null]
+  sContractActivateUponCreation char [null]
+  sStartPageBackgroundColor varchar [null]
+  AgentStatusDesc nvarchar
+  RatesProfile nvarchar [null]
+  AgentType nvarchar [null]
+  sManagingAgent varchar [null]
+  dContractDate date [null]
+  dContractExpireDate date [null]
+}
+
+Table Config_EntityCompanies {
+  iId int
+  sTpaCode varchar [null]
+  sCompanyNumber nvarchar [null]
+  sCompanyName nvarchar
+  sCompanyStatus varchar
+  sContactFirstName nvarchar [null]
+  sContactLastName nvarchar [null]
+  sContactMiddleName nchar [null]
+  sBillingAddress1 nvarchar [null]
+  sBillingAddress2 nvarchar [null]
+  sBillingCity nvarchar [null]
+  sBillingState nchar [null]
+  sBillingZipCode nvarchar [null]
+  iBillingCountryId int [null]
+  sMailingAddress1 nvarchar [null]
+  sMailingAddress2 nvarchar [null]
+  sMailingCity nvarchar [null]
+  sMailingState nchar [null]
+  sMailingZipCode nvarchar [null]
+  iMailingCountryId int [null]
+  sPhoneTypeCode1 varchar [null]
+  sPhoneNumber1 varchar [null]
+  sPhoneExt1 varchar [null]
+  sPhoneTypeCode2 varchar [null]
+  sPhoneNumber2 varchar [null]
+  sPhoneExt2 varchar [null]
+  sEmail nvarchar [null]
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  sImageLogoUrl varchar [null]
+  bInternalCoverageOnly bit [null]
+  sSmtpUser nvarchar [null]
+  sSmtpPwd nvarchar [null]
+  sSmtpHost nvarchar [null]
+  iSmtpPort int [null]
+  bGenerateContractNumber bit [null]
+  sVehicleCategoryType varchar [null]
+  sWebSiteUrl varchar [null]
+  iCompanyTypeId int [null]
+  sBillingMethod char [null]
+  sPendBillTransOption nvarchar [null]
+  sContractActivateOnRemittanceOption nvarchar [null]
+  sContractIncludeVoidOnRemittanceOption nvarchar [null]
+  sRemittanceOption nvarchar [null]
+  iCurrencyId int [null]
+  sImageSecondLogoUrl varchar [null]
+  sArAccount varchar [null]
+  sApAccount varchar [null]
+  sGlAccount varchar [null]
+  sContractActivateUponCreation char [null]
+  bAllowCancellations bit [null]
+  bAllowClaims bit [null]
+  iDistanceId int
+  sBillingType char [null]
+  iContractActivateOption tinyint [null]
+  bDefaultRemittanceRecipient bit [null]
+  sFedTaxId nvarchar [null]
+}
+
+Table Config_EntityLenders {
+  iId int
+  sTpaCode varchar
+  sLenderNumber varchar
+  sLenderName nvarchar
+  sLenderStatus varchar
+  sFedTaxId nvarchar [null]
+  sContactFirstName nvarchar [null]
+  sContactLastName nvarchar
+  sContactMiddleName nchar [null]
+  sBillingAddress1 nvarchar [null]
+  sBillingAddress2 nvarchar [null]
+  sBillingCity nvarchar [null]
+  sBillingState nvarchar [null]
+  sBillingZipCode nvarchar [null]
+  iBillingCountryId int [null]
+  sMailingAddress1 nvarchar [null]
+  sMailingAddress2 nvarchar [null]
+  sMailingCity nvarchar [null]
+  sMailingState nvarchar [null]
+  sMailingZipCode nvarchar [null]
+  iMailingCountryId int [null]
+  sPhoneTypeCode1 varchar [null]
+  sPhoneNumber1 varchar [null]
+  sPhoneExt1 varchar [null]
+  sPhoneTypeCode2 varchar [null]
+  sPhoneNumber2 varchar [null]
+  sPhoneExt2 varchar [null]
+  sEmail nvarchar [null]
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  sImageLogoUrl varchar [null]
+  sSmtpUser nvarchar [null]
+  sSmtpPwd nvarchar [null]
+  sSmtpHost nvarchar [null]
+  iSmtpPort int [null]
+  iCaptiveId int [null]
+  iLenderTypeId int [null]
+  sWebSiteUrl varchar [null]
+  sClaimPayMethod nvarchar [null]
+  sRefundPayMethod nvarchar [null]
+  sRefCode nvarchar [null]
+  iBillingParty int
+  iCoverageRateProfileId int [null]
+}
+
+Table Config_EntityLenderSellerInclusion {
+  iId int
+  iLenderId int
+  iSellerId int
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  sSellerNumber varchar
+  sLenderNumber varchar
+}
+
+Table Config_ProductComponents {
+  iId int
+  sCompDesc nvarchar
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  iProductTypeId int
+  iParentId int [null]
+  sTpaCode varchar [null]
+  sServiceCategoryCode nvarchar [null]
+  sClaimOdometerValidation varchar [null]
+}
+
+Table Config_ProductComponentsTranslation {
+  iId int
+  sCompDesc nvarchar
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  iProductTypeId int
+  iParentId int [null]
+  sTpaCode varchar [null]
+  sServiceCategoryCode nvarchar [null]
+  sClaimOdometerValidation varchar [null]
+  sTranslatedName nvarchar [null]
+  sCultureCode nvarchar [null]
+}
+
+Table Config_ProductLossCodes {
+  iId int
+  iCompId int
+  sLossCode varchar
+  sLossCodeDesc nvarchar
+  sLossTypeCode char
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  iParentId int [null]
+  nLaborHours decimal [null]
+  cPartCost money [null]
+  sTpaCode varchar [null]
+  sLossCodeType nvarchar [null]
+  sImageUrl varchar [null]
+  bPhotoReq bit [null]
+  btDefaultGoodwill bit
+  bLimitedView bit [null]
+  bExcludeDeductible bit [null]
+}
+
+Table Config_ProductLossCodesTranslation {
+  iId int
+  iCompId int
+  sLossCode varchar
+  sLossCodeDesc nvarchar
+  sLossTypeCode char
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  iParentId int [null]
+  nLaborHours decimal [null]
+  cPartCost money [null]
+  sTpaCode varchar [null]
+  sLossCodeType nvarchar [null]
+  sImageUrl varchar [null]
+  bPhotoReq bit [null]
+  btDefaultGoodwill bit
+  bLimitedView bit [null]
+  bExcludeDeductible bit [null]
+  sTranslatedName nvarchar [null]
+  sCultureCode nvarchar [null]
+}
+
+Table Config_ProductTypes {
+  iProductTypeid int
+  sProductDesc nvarchar
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  iSortOrder int [null]
+  sProductCode varchar [null]
+  sTextCode nvarchar [null]
+  sText nvarchar [null]
+}
+
+Table Config_ProductTypesTranslation {
+  iId int
+  iProducttypeId int
+  sProductDesc nvarchar
+  iSortOrder int [null]
+  sProductCode varchar [null]
+  sTextCode nvarchar [null]
+  sText nvarchar [null]
+  sTextType varchar [null]
+  sCultureCode varchar [null]
+  iInsertedUserId int [null]
+  dtInserted smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdated smalldatetime [null]
+}
+
+Table Contract_Cancellations {
+  iId int
+  iContractId int
+  sContractNumber varchar
+  dtCancelEffected date [null]
+  dtCancelReported date [null]
+  iCancelOdom int [null]
+  iCancelReasonId int [null]
+  iCancelMethodId int [null]
+  nCalcFactorOrig decimal [null]
+  nCalcFactorAdj decimal [null]
+  sCalcFactorNote nvarchar [null]
+  cRetailCostOrig money [null]
+  cRetailCostAdj money [null]
+  sRetailCostNote nvarchar [null]
+  cRetailTax1Orig money [null]
+  cRetailTax1Adj money [null]
+  cRetailTax2Orig money [null]
+  cRetailTax2Adj money [null]
+  cRetailRefundBaseOrig money [null]
+  cRetailRefundBaseAdj money [null]
+  cCancelFeeOrig money [null]
+  cCancelFeeAdj money [null]
+  sCancelFeeNote nvarchar [null]
+  cPaidClaimDeductOrig money [null]
+  cPaidClaimDeductAdj money [null]
+  sPaidClaimDeductNote nvarchar [null]
+  cRetailRefundOrig money [null]
+  cRetailRefundAdj money [null]
+  cRetailRefundTax1Orig money [null]
+  cRetailRefundTax1Adj money [null]
+  cRetailRefundTax2Orig money [null]
+  cRetailRefundTax2Adj money [null]
+  cNetCost money [null]
+  cMarkUpOrig money [null]
+  cMarkUpAdj money [null]
+  cFactroAppliedOrig money [null]
+  cFactroAppliedAdj money [null]
+  cSellerCancelFeeOrig money [null]
+  cSellerCancelFeeAdj money [null]
+  sSellerCancelFeeNote nvarchar [null]
+  cNonRefundFeeOrig money [null]
+  cNonRefundFeeAdj money [null]
+  sNonRefundFeeNote nvarchar [null]
+  cNoChargeBackOrig money [null]
+  cNoChargeBackAdj money [null]
+  cRetailRefundFromSellerOrig money [null]
+  cRetailRefundFromSellerAdj money [null]
+  cRetailRefundFromSellerTax1Orig money [null]
+  cRetailRefundFromSellerTax1Adj money [null]
+  cRetailRefundFromSellerTax2Orig money [null]
+  cRetailRefundFromSellerTax2Adj money [null]
+  cRetailRefundFromTpaOrig money [null]
+  cRetailRefundFromTpaAdj money [null]
+  cRetailRefundFromTpaTax1Orig money [null]
+  cRetailRefundFromTpaTax1Adj money [null]
+  cRetailRefundFromTpaTax2Orig money [null]
+  cRetailRefundFromTpaTax2Adj money [null]
+  cCheckAmount money [null]
+  sBillToPayeeType nvarchar [null]
+  bQuote bit [null]
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  sFactorType varchar [null]
+  sPayeeType varchar [null]
+  sPayeeName nvarchar [null]
+  sPayeeAddress1 nvarchar [null]
+  sPayeeAddress2 nvarchar [null]
+  sPayeeCity nvarchar [null]
+  sPayeeState nvarchar [null]
+  sPayeeZipCode nvarchar [null]
+  iPayeeCountryId int [null]
+  sPayeePayMethod varchar [null]
+  sCancelDetails nvarchar [null]
+  iPaymentId int [null]
+  bStatementCredit bit [null]
+  bUsedForCancellation bit [null]
+  iPayeeId int [null]
+  iTransActivityId int [null]
+  sBatchCancelFileName nvarchar [null]
+  sUnusedFactorType varchar [null]
+  nUnusedCalcFactorOrig decimal [null]
+  sSource nvarchar [null]
+  cFinancingTotalBalance money [null]
+  cFinancingCancelFee money [null]
+  cFinancingDealerFee money [null]
+  sPayeeNumber varchar [null]
+  cFinancingNsfFee money [null]
+  cFinancingLateChargeFee money [null]
+  iFinancingNumberOfPaymentsMade int [null]
+  bRecalcReq bit [null]
+  btFinancingOverridden bit [null]
+  cCustomerWriteOffOrig money [null]
+  cCustomerWriteOffAdj money [null]
+  btIncludeNonRefundableRatesFromNcb bit [null]
+  cDealerWriteOffOrig money [null]
+  cDealerWriteOffAdj money [null]
+  cFinancingTotalBalanceAdj money [null]
+  sCancelReasonCode nvarchar [null]
+  sCancelReasonDesc nvarchar [null]
+}
+
+Table Contract_CommissionPayees {
+  iId int
+  sTpaCode varchar
+  sCommissionPayeeNumber varchar
+  sCommissionPayeeName nvarchar
+  sCommissionPayeeStatus varchar
+  sAssociationType nvarchar [null]
+  iAssociationId int [null]
+  sBillingAddress1 nvarchar [null]
+  sBillingAddress2 nvarchar [null]
+  sBillingCity nvarchar [null]
+  sBillingState nvarchar [null]
+  sBillingZipCode nvarchar [null]
+  iBillingCountryId int [null]
+  sMailingAddress1 nvarchar [null]
+  sMailingAddress2 nvarchar [null]
+  sMailingCity nvarchar [null]
+  sMailingState nvarchar [null]
+  sMailingZipCode nvarchar [null]
+  iMailingCountryId int [null]
+  sPhoneTypeCode1 varchar [null]
+  sPhoneNumber1 varchar [null]
+  sPhoneExt1 varchar [null]
+  sPhoneTypeCode2 varchar [null]
+  sPhoneNumber2 varchar [null]
+  sPhoneExt2 varchar [null]
+  sEmail nvarchar [null]
+  btAdminBuckets bit [null]
+  btReserveBuckets bit [null]
+  btCommissionBuckets bit [null]
+  btIncentiveProgram bit [null]
+  sFedTaxId nvarchar [null]
+  dtInserted smalldatetime [null]
+  dtUpdated smalldatetime [null]
+  iInsertedUserId int [null]
+  iUpdatedUserId int [null]
+}
+
+Table Contract_CoverageDetails {
+  iId int
+  iContractId int
+  sContractNumber varchar
+  iCoverageLossCodeId int
+  cNetRate money [null]
+  cRetailRate money [null]
+  cNetTax1 money [null]
+  cNetTax2 money [null]
+  cRetailTax1 money [null]
+  cRetailTax2 money [null]
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  iLossCodeId int [null]
+  sLossCode varchar
+  sLossCodeDesc nvarchar
+  sLossCodeType nvarchar [null]
+  cOverRemit money [null]
+  cCalculatedDealerPack money [null]
+}
+
+Table Contract_DeductibleAmounts {
+  iId int
+  sTpaCode varchar
+  iDeductibleType int [null]
+  cDeductibleAmount money [null]
+  cDeductibleReducingAmount money
+  iInsertedUserId int [null]
+  dTInsertedTime smalldatetime
+}
+
+Table Contract_DistinctTerms {
+  iId int
+  stpacode varchar [null]
+  iContractTermMonth int [null]
+  icontracttermmiles int [null]
+}
+
+Table Contract_Header {
+  iId int
+  sTpaCode varchar
+  iDealerId int
+  iFulfillmentDealerId int [null]
+  sContractNumber varchar
+  sRefNumber nvarchar [null]
+  sFormNumber nvarchar [null]
+  sContractStatusCode varchar
+  sContractStatusDesc nvarchar
+  sRegisterNumber varchar
+  sContractPaymentMethod varchar
+  sDealNumber varchar
+  sStockNumber nvarchar
+  sFandIManagerFistName nvarchar
+  sFandIManagerLastName nvarchar
+  sVIN char
+  sVehicleClass nvarchar
+  sTierCode nvarchar
+  sNewUsed char [null]
+  iVehicleYear int
+  sMake nvarchar [null]
+  sModel nvarchar [null]
+  FuelType nvarchar [null]
+  Cyl nvarchar [null]
+  DRW nvarchar [null]
+  BaseMonths int
+  BaseMiles int
+  CorrosionMonths int
+  CorrosionMiles int
+  EmissionMonths int
+  EmissionMiles int
+  PowertrainMonths int
+  PowertrainMiles int
+  RustMonths int
+  RustMiles int
+  cVehiclePurchasePrice money [null]
+  sFinanceTypeCode nvarchar [null]
+  cFinancedAmount money [null]
+  iFinanceTermMonth int [null]
+  cMsrpnada money [null]
+  cMonthlyPayment money [null]
+  cApr decimal [null]
+  sBundleNumber varchar [null]
+  sAlternatenumber varchar [null]
+  iAgentId int
+  sAgentNumber varchar
+  sAgentName nvarchar
+  iLenderId int [null]
+  sLenderNumber varchar
+  sLenderName nvarchar
+  sLenderAddress1 nvarchar
+  sLenderAddress2 nvarchar
+  sLenderCity nvarchar
+  sLenderState nvarchar
+  sLenderZipCode nvarchar
+  dSaleDate date [null]
+  dInServiceDate date [null]
+  dEffectiveDate date [null]
+  dExpirationDate date [null]
+  dActivationDate date [null]
+  dBillDate date [null]
+  dtContractCancelledBilled date [null]
+  iSaleOdometer int [null]
+  iEffectiveOdometer int [null]
+  iExpirationOdometer int [null]
+  iStartingOdometer int
+  iEndingOdometer int
+  iServiceInterval int
+  sCustFirstName nvarchar [null]
+  sCustLastName nvarchar
+  sCustMiddleName nchar [null]
+  sCustAddress1 nvarchar [null]
+  sCustAddress2 nvarchar [null]
+  sCustCity nvarchar [null]
+  sCustState nvarchar [null]
+  sCustZipCode nvarchar [null]
+  sCustPrimaryPhone varchar [null]
+  sCustSecondaryPhone varchar [null]
+  sCustEmail nvarchar [null]
+  cNetRate money [null]
+  cNetTax1 money [null]
+  cNetTax2 money [null]
+  cOverRemit money [null]
+  cCurrentBalance money [null]
+  cDealerRemit money [null]
+  cCalculatedDealerPack money [null]
+  cDealerCost money [null]
+  cRetailRate money [null]
+  cRetailTax1 money [null]
+  cRetailTax2 money [null]
+  cRetailCalculated money [null]
+  bFunded bit
+  BalloonAmount money [null]
+  sProductCode varchar [null]
+  iCoverageId int [null]
+  sCoverageCode nvarchar [null]
+  sCoverageDesc nvarchar
+  iContractTermMonth int [null]
+  iContractTermMiles int [null]
+  iTermid int
+  sInsurerCode varchar [null]
+  CoverageGroupCode nvarchar [null]
+  CoverageGroupDesc nvarchar [null]
+  ReportGroupCode nvarchar [null]
+  ReportGroupDesc nvarchar [null]
+  OwnerId int [null]
+  OwnerType nvarchar [null]
+  RemittancePayeeId int [null]
+  RemittancePayeeType nvarchar [null]
+  cDeductibleAmount money [null]
+  iDeductibleType int [null]
+  cDeductibleReducingAmount money
+  sDeductibleTypeCode varchar [null]
+  DeductibleUniqueId int
+  Ratebookid int [null]
+  RatebookCode nvarchar [null]
+  RatebookDesc nvarchar [null]
+  sCancellationReason nvarchar [null]
+  dCancelDate date [null]
+  dCancelEffectDate date [null]
+  iCancelOdom int [null]
+  cCancelNetRate money [null]
+  cCancelDealerRemit money [null]
+  cCancelRetailRate money [null]
+  nCancellationFactor decimal [null]
+  cCancellationFee money [null]
+  dCancellationExtractedDate date [null]
+  dCancellationProcessedDate date [null]
+  sCancellationPayeeType varchar [null]
+  iCancellationPayeeId int [null]
+  sCancellationPayeeNumber varchar [null]
+  sCancellationPayeeName nvarchar [null]
+  sCancellationPayMethod varchar [null]
+  Balance money [null]
+  cFinancingCancelFee money [null]
+  DealerFee money [null]
+  sCancellationPayeeCountry nvarchar [null]
+  sCancellationPayeeAddress1 nvarchar [null]
+  sCancellationPayeeAddress2 nvarchar [null]
+  sCancellationPayeeZipCode nvarchar [null]
+  sCancellationPayeeState nvarchar [null]
+  sCancellationPayeeCity nvarchar [null]
+  cNSFFee money [null]
+  cLateCharge money [null]
+  cNumberOfPayments int [null]
+  cPaidClaimDeductOrig money [null]
+  cPaidClaimDeductAdj money [null]
+  cRetailRefundFromTpaOrig money [null]
+  iTransferCount int [null]
+  cTransferFee money [null]
+  dtTransferEffectiveDate smalldatetime [null]
+  iTransferMileage int [null]
+  sSource nvarchar [null]
+  sCustAltContactName nvarchar [null]
+  sCoBuyerAddress nvarchar [null]
+  sCoBuyerCity nvarchar [null]
+  sCoBuyerState nvarchar [null]
+  sCoBuyerZipCode nvarchar [null]
+  sEarningCurveName nvarchar [null]
+  sDevelopmentType varchar [null]
+  iEarningMainId int [null]
+  iInsertedUserId int [null]
+  iUpdatedUserId int [null]
+  dtInserted smalldatetime [null]
+  dtUpdated smalldatetime [null]
+  sCustBirthDate varchar [null]
+  sCoBuyerBirthDate varchar [null]
+  sReasonCode nvarchar [null]
+  iEarningMainId2 int [null]
+  iEarningMainId3 int [null]
+  dRatingDate date [null]
+}
+
+Table Contract_Notes {
+  iId int
+  iContractId int
+  sContractNumber varchar
+  bSystemNote bit [null]
+  sNoteType varchar
+  sNoteTypeDesc varchar [null]
+  sNoteText nvarchar [null]
+  iInsertedUserId int [null]
+  iUpdatedUserId int [null]
+  dtInserted smalldatetime [null]
+  dtUpdated smalldatetime [null]
+}
+
+Table Contract_PaymentTransactions {
+  iId int
+  sTpaCode varchar [null]
+  iPayeeId int
+  iCoverageBucketId int
+  iContractId int
+  sTransactionCode nvarchar [null]
+  cAmount money [null]
+  iPaymentBillingId int [null]
+  sTransactionDescription nvarchar [null]
+  dtTransactionDate date [null]
+  sCategoryCode nvarchar [null]
+  dtInserted smalldatetime [null]
+  dtUpdated smalldatetime [null]
+  iInsertedUserId int [null]
+  iUpdatedUserId int [null]
+}
+
+Table Contract_Rates {
+  iId int
+  iContractId int [null]
+  iBucketId int [null]
+  sBucketCategoryCode varchar [null]
+  sBucketCode varchar
+  sBucketLabel nvarchar
+  sBucketRateType char [null]
+  cWrittenAmount money [null]
+  cCancelledAmount money [null]
+  dtInserted smalldatetime [null]
+  dtUpdated smalldatetime [null]
+  iInsertedUserId int [null]
+  iUpdatedUserId int [null]
+}
+
+Table Contract_RegisterTransactions {
+  iId int
+  iSellerId int
+  sSellerNumber varchar
+  iCheckNumber nvarchar [null]
+  dtCheckDate smalldatetime [null]
+  cPaymentAmount money
+  dtProcessDate smalldatetime [null]
+  sRegisterNumber varchar
+  sContractNumber varchar
+  sCancelReasonCode nvarchar [null]
+  sCancelReason nvarchar [null]
+  cToApply money [null]
+}
+
+Table Contract_ServiceSchedule {
+  iId int
+  iContractId int
+  iSeqNumber int
+  dtExpectedDate smalldatetime [null]
+  iExpectedOdom int [null]
+  iLossCodeId int
+  sDesc nvarchar [null]
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  iCoverageLossCodeId int [null]
+  iClaimId int [null]
+  dtReminderIssued smalldatetime [null]
+  sReminderSentBy nvarchar [null]
+  cRedimAmount money [null]
+  sServiceDetails nvarchar [null]
+  iClaimDateDiff int
+  iClaimOdomDiff int
+}
+
+Table Contract_Vehicle {
+  iId int
+  iContractId int
+  sContractNumber varchar
+  iVinId int [null]
+  sVinNumber char
+  iVehicleYear int
+  sAutoCode nvarchar
+  sMake nvarchar [null]
+  sModel nvarchar [null]
+  sBody nvarchar [null]
+  sBodyStyle varchar [null]
+  sDrv varchar [null]
+  sCid varchar [null]
+  sCyl nvarchar [null]
+  sFuel varchar [null]
+  sCarb char [null]
+  sTonRating varchar [null]
+  sAspiration varchar [null]
+  bSuppercharged bit
+  sSegmentationCode nvarchar [null]
+  sTransmission varchar [null]
+  sTrim nvarchar [null]
+  sGvwr char [null]
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  bNitrogenIstalled bit [null]
+  sColor nvarchar [null]
+  sVehicleAgeType char [null]
+  btFactoryCertified bit [null]
+  sTireOption varchar [null]
+  iOemTermMonth int [null]
+  dtWarrantyInService smalldatetime [null]
+  sEngineModel nvarchar [null]
+  iOemTermMiles int [null]
+  iPowerTrainTermMonth int [null]
+  iPowerTrainTermMiles int [null]
+  sVinNumberReverse varchar [null]
+}
+
+Table Coverage_ComponentLevels {
+  iId int
+  iCoveragePlanId int [null]
+  sCoverageCode nvarchar [null]
+  sCoverageDesc nvarchar
+  iProductComponentId int [null]
+  sCompDesc nvarchar
+  cAggregateCoverageLimit money
+  cTotalPerClaimLimit money
+  iInsertedUserId int [null]
+  dtInserted smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdated smalldatetime [null]
+}
+
+Table Coverage_CoverageNotes {
+  iId int
+  iCoverageId int [null]
+  sTpaCode varchar [null]
+  sCoverageCode nvarchar [null]
+  sCoverageDesc nvarchar
+  Type varchar [null]
+  Note nvarchar
+  EnteredBy nvarchar [null]
+  EnteredTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdated smalldatetime [null]
+}
+
+Table Coverage_DeductibleAmounts {
+  iId int
+  sTpaCode varchar [null]
+  sCoverageCode nvarchar [null]
+  sCoverageDesc nvarchar
+  sProductCode varchar [null]
+  sProfileCode nvarchar [null]
+  iDeductibleType int
+  cAmount money [null]
+  cReducingAmount money [null]
+  iInsertedUserId int
+  dtInsertedTime smalldatetime
+  iUpdatedUserId int [null]
+  dtUpdated smalldatetime [null]
+}
+
+Table Dealer_Contacts {
+  iId int
+  sSellerNumber varchar
+  sSellerName nvarchar
+  iSellerId int
+  iDealerId int [null]
+  iPositionId int
+  sFirstName varchar [null]
+  sLastName varchar [null]
+  sEmail varchar [null]
+  sBusinessPhone varchar [null]
+  sCellphone varchar [null]
+  sFax varchar [null]
+  iInsertedUserId int [null]
+  dtInserted smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdated smalldatetime [null]
+}
+
+Table Dealer_DealerGroupLink {
+  iId int
+  iDealerId int
+  sSellerNumber varchar
+  iDealerGroupId int [null]
+  iInsertedUserId int [null]
+  dtInserted smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdated smalldatetime [null]
+}
+
+Table Dealer_DealerGroups {
+  iId int
+  sTpaCode varchar
+  iDealerGroupTypeId int [null]
+  sDealerGroupTypeCode varchar [null]
+  sDealerGroupTypeName nvarchar [null]
+  sDealerGroupNumber varchar
+  sDealerGroupName nvarchar
+  sDealerGroupStatus varchar
+  sContactFirstName nvarchar [null]
+  sContactLastName nvarchar
+  sContactMiddleName nchar [null]
+  BusinessPhone varchar [null]
+  BusinessPhoneExt varchar [null]
+  Fax varchar [null]
+  FaxExt varchar [null]
+  sEmail nvarchar [null]
+  sBillingAddress1 nvarchar [null]
+  sBillingAddress2 nvarchar [null]
+  sBillingCity nvarchar [null]
+  sBillingState nvarchar [null]
+  sBillingZipCode nvarchar [null]
+  dtInserted smalldatetime [null]
+  dtUpdated smalldatetime [null]
+  dActivated date [null]
+  dTerminated date [null]
+  iInsertedUserId int [null]
+  iUpdatedUserId int [null]
+}
+
+Table Dealer_Header {
+  iId int
+  sTpaCode varchar
+  sDealerNumber varchar
+  sDealerName nvarchar
+  sDBAName varchar
+  sDealerStatusCode varchar
+  sDealerStatusDesc nvarchar
+  sAgentNumber varchar
+  sAgentName nvarchar
+  sRefundPayMethod nvarchar [null]
+  sClaimPayMethod nvarchar [null]
+  sInsuredState nvarchar
+  sReferenceNumber nvarchar
+  dActivationDate date [null]
+  dTerminationDate date [null]
+  sBillingAddress1 nvarchar
+  sBillingAddress2 nvarchar
+  sBillingCity nvarchar
+  sBillingState nvarchar
+  sBillingZipCode nvarchar
+  sMailingAddress1 nvarchar
+  sMailingAddress2 nvarchar
+  sMailingCity nvarchar
+  sMailingState nvarchar
+  sMailingZipCode nvarchar
+  cLaborRate money
+  sDealerContactFirstName nvarchar [null]
+  sDealerContactLasName nvarchar
+  sDealerWebsite varchar [null]
+  sDealerBusinessPhone varchar [null]
+  sDealerFax varchar [null]
+  sDealerEmailsAddress nvarchar [null]
+  iCoveragerateprofileid int [null]
+  sProfilename nvarchar [null]
+  dtInserted smalldatetime [null]
+  dtUpdated smalldatetime [null]
+  sInspectionCompanyNumber varchar [null]
+  sInspectionCompanyName nvarchar [null]
+  sAssociationCode nvarchar [null]
+  sFedTaxId nvarchar [null]
+  btUseProductTax bit
+  btUseCustomerState bit
+  sSaleTaxLabel1 nvarchar [null]
+  nSaleTaxRate1 decimal [null]
+  sSaleTaxLabel2 nvarchar [null]
+  nSaleTaxRate2 decimal [null]
+  bSaleTax2Cumulative bit [null]
+  bSaleTaxExemptionsAllowed bit [null]
+  bNoDealerTax bit [null]
+  sBillingToleranceType varchar [null]
+  nBillingTolerance decimal [null]
+  iBillingToleranceMultiPayType smallint [null]
+  sBillingToleranceMultiPayType varchar [null]
+  bIntegratedReports bit [null]
+  dIntegratedDate smalldatetime [null]
+  EnteredBy nvarchar [null]
+  iInsertedUserId int [null]
+  iUpdatedUserId int [null]
+  btActiveServicer bit
+  sContractPayMethod varchar [null]
+  sBillingCountryName nvarchar
+  sMailingCountryName nvarchar
+}
+
+Table Dealer_Notes {
+  iId int
+  sNoteType varchar
+  iDealerId int
+  sDealerNumber varchar
+  sDealerName nvarchar
+  sNoteTypeDesc varchar [null]
+  sNote nvarchar
+  bSystemNote bit [null]
+  iContractAlertType int [null]
+  iClaimAlertType int [null]
+  dtInserted smalldatetime [null]
+  dtUpdated smalldatetime [null]
+  iInsertedUserId int [null]
+  iUpdatedUserId int [null]
+}
+
+Table Earnings {
+  iContractId int [null]
+  iId bigint
+  iContractHeaderId int
+  sEarningSet nvarchar
+  sEarningMethod nvarchar [null]
+  sDevelopmentPeriod varchar
+  dtEarningDate date [null]
+  nEarningFactorCurrent decimal [null]
+  nEarningFactorCurrent2 decimal [null]
+  nEarningFactorCurrent3 decimal [null]
+  nEarningFactorCumulative decimal [null]
+  nEarningFactorCumulative2 decimal [null]
+  nEarningFactorCumulative3 decimal [null]
+  cAdminEarnedCurrent money [null]
+  cAdminEarnedCurrent2 money [null]
+  cAdminEarnedCurrent3 money [null]
+  cAdminEarnedCumulative money [null]
+  cAdminEarnedCumulative2 money [null]
+  cAdminEarnedCumulative3 money [null]
+  cAdminUnEarned money [null]
+  cAdminUnEarned2 money [null]
+  cAdminUnEarned3 money [null]
+  cReserveEarnedCurrent money [null]
+  cReserveEarnedCurrent2 money [null]
+  cReserveEarnedCurrent3 money [null]
+  cReserveEarnedCumulative money [null]
+  cReserveEarnedCumulative2 money [null]
+  cReserveEarnedCumulative3 money [null]
+  cReserveUnEarned money [null]
+  cReserveUnEarned2 money [null]
+  cReserveUnEarned3 money [null]
+  cCommissionEarnedCurrent money [null]
+  cCommissionEarnedCurrent2 money [null]
+  cCommissionEarnedCurrent3 money [null]
+  cCommissionEarnedCumulative money [null]
+  cCommissionEarnedCumulative2 money [null]
+  cCommissionEarnedCumulative3 money [null]
+  cCommissionUnEarned money [null]
+  cCommissionUnEarned2 money [null]
+  cCommissionUnEarned3 money [null]
+  iEarningTypeId int [null]
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  iDevelopmentPeriod int [null]
+  cRetailEarnedCurrent money [null]
+  cRetailEarnedCurrent2 money [null]
+  cRetailEarnedCurrent3 money [null]
+  cRetailEarnedCumulative money [null]
+  cRetailEarnedCumulative2 money [null]
+  cRetailEarnedCumulative3 money [null]
+  cRetailUnearned money [null]
+  cRetailUnearned2 money [null]
+  cRetailUnearned3 money [null]
+  iEarningMainId int [null]
+  iEarningMainId2 int [null]
+  iEarningMainId3 int [null]
+  iEarningGroupId1 int [null]
+  iEarningGroupId2 int [null]
+  iEarningGroupId3 int [null]
+  iEarningAssignmentId1 int [null]
+  iEarningAssignmentId2 int [null]
+  iEarningAssignmentId3 int [null]
+  iDevelopmentPeriod2 int [null]
+  iDevelopmentPeriod3 int [null]
+}
+
+Table Entity_Servicers {
+  iId int
+  sTpaCode varchar
+  sServicerNumber varchar
+  sServicerName nvarchar
+  sServicerStatus varchar
+  sContactFirstName nvarchar [null]
+  sContactLastName nvarchar [null]
+  sContactMiddleName nchar [null]
+  sBillingAddress1 nvarchar [null]
+  sBillingAddress2 nvarchar [null]
+  sBillingCity nvarchar [null]
+  sBillingState nvarchar [null]
+  sBillingZipCode nvarchar [null]
+  iBillingCountryId int [null]
+  sMailingAddress1 nvarchar [null]
+  sMailingAddress2 nvarchar [null]
+  sMailingCity nvarchar [null]
+  sMailingState nvarchar [null]
+  sMailingZipCode nvarchar [null]
+  iMailingCountryId int [null]
+  sPhoneTypeCode1 varchar [null]
+  sPhoneNumber1 varchar [null]
+  sPhoneExt1 varchar [null]
+  sPhoneTypeCode2 varchar [null]
+  sPhoneNumber2 varchar [null]
+  sPhoneExt2 varchar [null]
+  sEmail nvarchar [null]
+  cLaborRate money [null]
+  nPartTax1 decimal [null]
+  nPartTax2 decimal [null]
+  nLaborTax1 decimal [null]
+  nLaborTax2 decimal [null]
+  sImageLogoUrl varchar [null]
+  sSmtpUser nvarchar [null]
+  sSmtpPwd nvarchar [null]
+  sSmtpHost nvarchar [null]
+  iSmtpPort int [null]
+  sVehicleCategoryType varchar [null]
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  sWebSiteUrl varchar [null]
+  iServicerTypeId int [null]
+  sClaimPayMethod nvarchar [null]
+  sRefundPayMethod nvarchar [null]
+  sCreditCardNotifyMethod nvarchar [null]
+  sDispatchMethod char [null]
+  sAccountingNumber varchar [null]
+  sStateLicense varchar [null]
+  btSelfServicingDealer bit [null]
+  sAccountingNumber2 varchar [null]
+  iCurrencyId int [null]
+  btNationalServiceProvider bit [null]
+  dContractDate date [null]
+  dContractExpireDate date [null]
+  iServiceRecallPeriod int
+  sServiceRecallPeriodTerm char [null]
+  iInvoiceSubmission int
+  sInvoiceSubmissionTerm char [null]
+  btPartsVerificationRequired bit
+  btContracted bit
+  btSealedSystemsRepair bit
+  iCustomerSatisfaction int
+  iRating int
+  sFacilityType varchar [null]
+  tOpenSunday sql_variant [null]
+  tOpenMonday sql_variant [null]
+  tOpenTuesday sql_variant [null]
+  tOpenWednesday sql_variant [null]
+  tOpenThursday sql_variant [null]
+  tOpenFriday sql_variant [null]
+  tOpenSaturday sql_variant [null]
+  tCloseSunday sql_variant [null]
+  tCloseMonday sql_variant [null]
+  tCloseTuesday sql_variant [null]
+  tCloseWednesday sql_variant [null]
+  tCloseThursday sql_variant [null]
+  tCloseFriday sql_variant [null]
+  tCloseSaturday sql_variant [null]
+  sTimeZone varchar [null]
+  fLatitude float [null]
+  fLongitude float [null]
+  sPaymentFax varchar [null]
+  sPaymentEmail nvarchar [null]
+  iInspectionCompanyId int [null]
+  sServiceCategory varchar [null]
+  sFedTaxId nvarchar [null]
+}
+
+Table Payment_BillingParty {
+  iId int
+  iBatchId int
+  iPayerId int
+  sTpaCode varchar
+  sRegisterNumber varchar
+  sPayeeType nvarchar [null]
+  iPayeeId int [null]
+  sPayeeName nvarchar
+  sPayeeAddress1 nvarchar [null]
+  sPayeeAddress2 nvarchar [null]
+  sPayeeCity nvarchar [null]
+  sPayeeState nchar [null]
+  sPayeeZipCode nvarchar [null]
+  iPayeeCountryId int [null]
+  cPaymentAmount money
+  sBankAccountNumber nvarchar [null]
+  sBankRoutingNumber nvarchar [null]
+  dtCheckDate smalldatetime [null]
+  dtCheckClearDate smalldatetime [null]
+  sCheckNumber nvarchar [null]
+  sAccountHolderName nvarchar [null]
+  sCheckMemo nvarchar [null]
+  sBankName nvarchar [null]
+  sBankCity nvarchar [null]
+  sBankState nchar [null]
+  sBankPhone varchar [null]
+  dtProcessDate smalldatetime [null]
+  sPaymentRefNumber varchar [null]
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  bCheckManual bit [null]
+  iContractCount int [null]
+  btFinalized bit [null]
+  dtCreatedDate smalldatetime [null]
+  dtInvoiceDate smalldatetime [null]
+  sPhoneTypeCode1 varchar [null]
+  sPhoneNumber1 varchar [null]
+  sPhoneExt1 varchar [null]
+  sPhoneTypeCode2 varchar [null]
+  sPhoneNumber2 varchar [null]
+  sPhoneExt2 varchar [null]
+  sEmail nvarchar [null]
+  sRegisterRefNumber varchar [null]
+  sBillingType char
+  sTransactionId varchar [null]
+  sPaymentMethodCode varchar [null]
+  sPayerType nvarchar [null]
+  bIsDefault bit
+}
+
+Table Profile_Buckets {
+  iId int
+  iDetailId int
+  iBucketId int
+  cAmount money
+  btExclusive bit
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  nPercentage decimal
+}
+
+Table Profile_DateRanges {
+  iId int
+  iProfileId int
+  dtFrom date
+  dtTo date [null]
+  iProductTypeId int [null]
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  iRoundingOption int
+}
+
+Table Profile_Details {
+  iId int
+  iDateRangeId int
+  iDeductibleId int [null]
+  sClassCode varchar [null]
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  iCoverageId int [null]
+  iOrder int [null]
+  sVehicleAgeType varchar [null]
+  iTermMonthFrom int [null]
+  iTermMileFrom int [null]
+  iTermMonthTo int [null]
+  iTermMileTo int [null]
+  cMarkup money
+  sTierLevel nvarchar [null]
+  iCoverageGroupId int [null]
+  iTermGroupId int [null]
+  iDealStructureValue int [null]
+  iClassGroupId int [null]
+  sTermGroupDesc varchar
+}
+
+Table Profile_Header {
+  iId int
+  sTpaCode varchar
+  sProfileName nvarchar
+  btActive bit [null]
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  sNotes nvarchar [null]
+  btDefault bit
+  iCurrencyId int
+}
+
+Table Security_Positions {
+  iId int
+  sName varchar
+  sTpaCode varchar [null]
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+}
+
+Table Security_UserPositions {
+  iId int
+  iUserId int
+  sJobPositionCode varchar
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+}
+
+Table Security_Users {
+  iid int
+  sUserFirstName nvarchar [null]
+  sUserLastName nvarchar
+  iUserTypeId int [null]
+  iOwnerId int [null]
+  sUserEmail nvarchar
+  sUserStatusCode char [null]
+  iTemplateId int [null]
+  sUserTemplateDesc nvarchar [null]
+  dtInsertedTime smalldatetime [null]
+  iInsertedUserId int [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  dtLastLoggedIn smalldatetime [null]
+}
+
+Table VehicleClassification_Details {
+  iId int
+  iVehicleClassificationId int [null]
+  sClassNew varchar [null]
+  sClassUsed varchar [null]
+  sMake nvarchar [null]
+  sModel nvarchar [null]
+  iYearFrom int [null]
+  iYearTo int [null]
+  sCylinders varchar [null]
+  sFuel varchar [null]
+  sDrivingWheels varchar [null]
+  sTonRating varchar [null]
+  sSegmentation varchar [null]
+  sAspirationCode varchar [null]
+  sGrossVehicleWeight varchar [null]
+  sTiresOption varchar [null]
+  sVehicleType varchar [null]
+  cPurchasePriceFrom money [null]
+  cPurchasePriceTo money [null]
+  cFinancedAmountFrom money [null]
+  cFinancedAmountTo money [null]
+  iMinOdom int [null]
+  iMaxOdom int [null]
+  cCubicCentimetersFrom decimal [null]
+  cCubicCentimetersTo decimal [null]
+  dtSaleDateFrom smalldatetime [null]
+  dtSaleDateTo smalldatetime [null]
+  iSeverity int [null]
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  sEngineModel nvarchar [null]
+  iMinUsageHours int
+  iMaxUsageHours int
+  iMinHorsepower int
+  iMaxHorsepower int
+  sTransmission varchar [null]
+}
+
+Table systranschemas {
+  tabid int
+  startlsn binary
+  endlsn binary
+  typeid int
+}
+
+Table change_tables {
+  object_id int
+  version int [null]
+  source_object_id int [null]
+  capture_instance nvarchar
+  start_lsn binary [null]
+  end_lsn binary [null]
+  supports_net_changes bit [null]
+  has_drop_pending bit [null]
+  role_name nvarchar [null]
+  index_name nvarchar [null]
+  filegroup_name nvarchar [null]
+  create_date datetime [null]
+  partition_switch bit
+}
+
+Table ddl_history {
+  source_object_id int [null]
+  object_id int
+  required_column_update bit [null]
+  ddl_command nvarchar [null]
+  ddl_lsn binary
+  ddl_time datetime [null]
+}
+
+Table lsn_time_mapping {
+  start_lsn binary
+  tran_begin_time datetime [null]
+  tran_end_time datetime [null]
+  tran_id varbinary [null]
+  tran_begin_lsn binary [null]
+}
+
+Table captured_columns {
+  object_id int
+  column_name nvarchar
+  column_id int [null]
+  column_type nvarchar
+  column_ordinal int
+  is_computed bit [null]
+  masking_function nvarchar [null]
+}
+
+Table index_columns {
+  object_id int
+  column_name nvarchar
+  index_ordinal tinyint
+  column_id int
+}
+
+Table Claim_Components {
+  iid int
+  iClaimId int
+  sClaimNumber varchar
+  sContractNumber varchar
+  iClaimPayeeId int
+  iFailureLossCodeId int [null]
+  sFailureLossCode varchar
+  sFailureLossCodeDescription nvarchar
+  sComplaint nvarchar [null]
+  sCause nvarchar [null]
+  sCorrection nvarchar [null]
+  sPayMethod nvarchar [null]
+  dtInserted smalldatetime [null]
+  dtUpdated smalldatetime [null]
+}
+
+Table Claim_Details {
+  iId int
+  iClaimId int
+  iClaimCompontentId int
+  iClaimPayeeId int [null]
+  sDetailStatusCode varchar
+  sDetailStatusDesc nvarchar
+  sDetailTypeCode char
+  iStatusReasonId int [null]
+  sReasonCode nvarchar [null]
+  sReasonDescription nvarchar [null]
+  sDetailTypeDescription varchar [null]
+  iLossCodeId int
+  sLossCode varchar
+  sLossCodeDescription nvarchar
+  bSubletFlag bit [null]
+  btGoodWill bit [null]
+  iWarrantyMonth int [null]
+  iWarrantyOdom int [null]
+  sPartNumber varchar [null]
+  sPartDescription nvarchar [null]
+  nPartReqQty decimal [null]
+  nPartReqUnitCost money [null]
+  nPartAuthQty decimal [null]
+  nPartAuthUnitCost money [null]
+  iTireTread int [null]
+  nPartSubmitQty decimal [null]
+  cPartSubmitTotal money [null]
+  nLaborSubmitQty decimal [null]
+  cLaborSubmitTotal money [null]
+  cPartTax1 money [null]
+  cPartTax2 money [null]
+  cLaborTax1 money [null]
+  cLaborTax2 money [null]
+  nLaborReqQty decimal [null]
+  nLaborReqUnitCost money [null]
+  nLaborAuthQty decimal [null]
+  nLaborAuthUnitCost money [null]
+  sPayMethod nvarchar [null]
+  dAuthorizedDate date [null]
+  sAuthNumber nvarchar [null]
+  dDeniedDate date [null]
+  dApprovedToPayDate date [null]
+  dtPaymentProcessed smalldatetime [null]
+  cTotalPending money [null]
+  cTotalDenied money [null]
+  cTotalPaid money [null]
+  sPaymentInstructCode nvarchar [null]
+  dtInserted smalldatetime [null]
+  dtUpdated smalldatetime [null]
+  bSelfAuthorized bit
+  iInsertedUserId int [null]
+  iUpdatedUserId int [null]
+  iRefPaymentId int [null]
+  sLaborOpCode nvarchar
+  iAuthorizedUserId int [null]
+  iDeniedUserId int [null]
+}
+
+Table Claim_Header {
+  iId int
+  iContractId int
+  sClaimNumber varchar
+  sRONumber nvarchar
+  sClaimStatusCode varchar [null]
+  sClaimStatusDesc nvarchar
+  dRODate date [null]
+  dClaimDate date [null]
+  iServiceOdom int [null]
+  sPriorityCode varchar [null]
+  sActivityCode varchar [null]
+  nActualCashValue money [null]
+  iAssignedToId int [null]
+  sAssignedToFirstName nvarchar [null]
+  sAssignedToLastName nvarchar [null]
+  dtInserted smalldatetime [null]
+  dtUpdated smalldatetime [null]
+  iInsertedUserId int [null]
+  iUpdatedUserId int [null]
+  btCommunicationPreferenceSpecialHandling bit [null]
+  iSpecialHandlingServicerId int [null]
+  sSpecialHandlingEntityType varchar [null]
+  dtEstimatedCompletionDate smalldatetime [null]
+  sClaimRefNumber nvarchar [null]
+  sInvoiceNumber varchar [null]
+  dDateOfInvoice date [null]
+}
+
+Table Claim_Notes {
+  iId int
+  iClaimId int
+  sNoteType varchar
+  sText nvarchar [null]
+  bSystemNote bit [null]
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  sEnteredByUserName nvarchar [null]
+  sUpdatedByUserName nvarchar [null]
+  dtReminderActive smalldatetime [null]
+  dtReminderIssued smalldatetime [null]
+  sReminderSentBy nvarchar [null]
+  iExpectedOdom int [null]
+  iEntityType int [null]
+  iAssignedToUserId int [null]
+  bExternal bit [null]
+}
+
+Table Claim_Payees {
+  iId int
+  iClaimId int
+  bDefaultPayee bit [null]
+  bDefaultServicer bit [null]
+  sPayeeType varchar [null]
+  sPayeeNumber varchar
+  sPayeeName nvarchar
+  sPayeeContactFirstName nvarchar [null]
+  sPayeeContactLastName nvarchar
+  sPayeeAddress1 nvarchar [null]
+  sPayeeAddress2 nvarchar [null]
+  sPayeeCity nvarchar [null]
+  sPayeeState nchar [null]
+  sPayeeZipCode nvarchar [null]
+  sPayeePhoneNumber varchar [null]
+  sPayeeEmail nvarchar [null]
+  sPayMethod nvarchar [null]
+  sCreditCardNotifyMethod nvarchar [null]
+  cLaborRate money [null]
+  nPartTax1 decimal [null]
+  nPartTax2 decimal [null]
+  nLaborTax1 decimal [null]
+  nLaborTax2 decimal [null]
+  dtInserted smalldatetime [null]
+  dtUpdated smalldatetime [null]
+  iInsertedUserId int [null]
+  iUpdatedUserId int [null]
+}
+
+Table Config_ARPaymentApplied {
+  iId int
+  iARPaymentId int [null]
+  iContractId int [null]
+  sContractNumber nvarchar [null]
+  iContractBalanceTransId int [null]
+  iPaymentTransId int [null]
+  iBillingStatementAdjId int [null]
+  sPayerType varchar [null]
+  iPayerId int [null]
+  sPayerName nvarchar [null]
+  sPayeeName nvarchar [null]
+  sRegisterNumber varchar [null]
+  TransDate date [null]
+  cARPaymentAmount money [null]
+  iBalanceRefundPaymentId int [null]
+  iClaimBalanceTransId int [null]
+  iClaimId int [null]
+  iInsertedUserId int [null]
+  dtInserted smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdated smalldatetime [null]
+}
+
+Table Config_ARPaymentReceived {
+  iARPaymentId int
+  sARPaymentTypeCode varchar [null]
+  sPayerType varchar [null]
+  iPayerId int [null]
+  sPayeeType varchar [null]
+  iPayeeId int [null]
+  cPaymentAmount money [null]
+  sBankName nvarchar [null]
+  sBankCity nvarchar [null]
+  sBankState nvarchar [null]
+  sBankPhone varchar [null]
+  sCheckNumber varchar [null]
+  dtCheckDate date [null]
+  dtCheckClearDate date [null]
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  sMemo varchar [null]
+  dtProcessDate smalldatetime [null]
+  sAppliedBy varchar [null]
+  sTransactionTypeCode varchar [null]
+  iVoidedPaymentId int [null]
+  sBillingType varchar [null]
+  cCommissionApplied money [null]
+}
+
+Table Config_Buckets {
+  iId int
+  iProductTypeId int [null]
+  sBucketLabel nvarchar
+  sCategoryCode varchar
+  iSortOrder int
+  sRatingType varchar
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  sTpaCode varchar [null]
+  bRemittable bit [null]
+  sBucketCode varchar
+  bEarnSet1 bit [null]
+  bEarnSet2 bit [null]
+  bEarnSet3 bit [null]
+  sBucketRateType char [null]
+  iBucketTypeId int [null]
+}
+
+Table Config_ClaimGAPDetails {
+  iId int
+  iClaimId int
+  sFieldCode nvarchar
+  sTitleText nvarchar
+  sFieldType nvarchar
+  sAmountType nvarchar [null]
+  cAmount money
+  sNote nvarchar [null]
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  dtValue smalldatetime [null]
+  sValue nvarchar [null]
+  iValue int [null]
+  nValue decimal [null]
+  btOverride bit [null]
+}
+
+Table Config_ConfigFormProfiles {
+  iId bigint
+  FormProfileId int
+  FormNumber nvarchar [null]
+  ProfileCode nvarchar
+  ProductType varchar [null]
+  sCoverageCode nvarchar
+  sCoverageDesc nvarchar
+  Insurer nvarchar
+  sSellerNumber varchar
+  sStateCode nvarchar
+  sLenderNumber varchar
+  EffectiveBeginningDate date
+  EffectiveEndDate date [null]
+  iInsertedUserId int [null]
+  dtInserted smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdated smalldatetime [null]
+}
+
+Table Config_ContractBalanceTransactions {
+  iid int
+  iContractid int
+  sFeeType nvarchar
+  TransName varchar
+  sTransType nvarchar
+  Transdate date [null]
+  BillDate date [null]
+  sPayerType nvarchar [null]
+  sRegisterNumber varchar [null]
+  sPayerName nvarchar [null]
+  sPayeeName nvarchar [null]
+  UserName nvarchar [null]
+  Amount money
+  cTaxAmount1 money [null]
+  cTaxAmount2 money [null]
+  Total money [null]
+  iInsertedUserId int [null]
+  dtInserted smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdated smalldatetime [null]
+}
+
+Table Config_CoverageGroups {
+  iId int
+  sTpaCode varchar
+  sGroupCode nvarchar [null]
+  sGroupDesc nvarchar
+  sType varchar [null]
+  iInsertedUserId int [null]
+  dtInserted smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdated smalldatetime [null]
+}
+
+Table Config_CoverageLossCodes {
+  iId bigint
+  iCoverageId int
+  iLossCodeId int
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  iTermMonth int [null]
+  iTermMiles int [null]
+  iNumOccurs int [null]
+  iMonthBelow int [null]
+  iMonthAbove int [null]
+  iOdomBelow int [null]
+  iOdomAbove int [null]
+  iMonthInterval int [null]
+  sMonthOdomIntervalCode varchar [null]
+  cProductRetailCost money [null]
+  sIntervalOperator varchar [null]
+  iOdomInterval int [null]
+  bPartInfoReq bit [null]
+  cProductNetCost money [null]
+  bItemVisible bit [null]
+  bItemSelectable bit [null]
+  bPriceVisible bit [null]
+  cOwnerFeeAmount money [null]
+  nOwnerFeePercent decimal [null]
+  cAgentFeeAmount money [null]
+  nAgentFeePercent decimal [null]
+  cIssuePolicyFeeAmount money [null]
+  nIssuePolicyFeePercent decimal [null]
+  cReserveFeeAmount money [null]
+  nReserveFeePercent decimal [null]
+  sClaimPrintFormTemplate nvarchar [null]
+  cMaxCoverageTotalAmount money [null]
+  cMaxCoveragePartAmount money [null]
+  iMaxPartQty int [null]
+  bPrevServicesReq bit [null]
+  cMaxCoveragePartAmountPerClaim money [null]
+  iMaxPartQtyPerClaim int [null]
+  sClaimPayerType nvarchar [null]
+  iClaimPayerId int [null]
+  bNotForSchedule bit [null]
+  bItemSelectedByDefault bit [null]
+  iRateTermMonthFrom int [null]
+  iRateTermMonthTo int [null]
+  iRateTermOdomFrom int [null]
+  iRateTermOdomTo int [null]
+  sDescription nvarchar [null]
+  iTermId int [null]
+  cRedemptionAmt money
+  iRateBookId int
+  iRowNumberClone int [null]
+  iCoverageRateDateRange int [null]
+  bReliesOnOEMWarranty bit [null]
+  sRedemptionOption varchar [null]
+  cRedemptionAmount money [null]
+  nLaborTime decimal [null]
+  cPartsAmount money [null]
+  btHideVinDecoded bit
+  iExpireMile int [null]
+  iExpireMonth int [null]
+  sDaterangedesc nvarchar [null]
+  sRateBookDesc nvarchar [null]
+}
+
+Table Config_CoveragePlans {
+  iId int
+  dtActiveFrom smalldatetime [null]
+  dtActiveTo smalldatetime [null]
+  sCoverageDesc nvarchar
+  iInsertedUserId int [null]
+  dtInsertedTime smalldatetime [null]
+  iUpdatedUserId int [null]
+  dtUpdatedTime smalldatetime [null]
+  iProductTypeId int
+  sCoverageCode nvarchar [null]
+  sTpaCode varchar [null]
+  cMaxCoverageAmount money [null]
+  nMaxPartsMarkUpPercent decimal [null]
+  iEffectiveDateLeg int [null]
+  iOwnerId int [null]
+  sOwnerType nvarchar [null]
+  bOptionMode bit [null]
+  iOdomEligFrom int [null]
+  iOdomEligTo int [null]
+  sVehicleAgeType char [null]
+  bExpireContractOnPaidClaim bit
+  bEarningMaintenance bit
+  iEarningMainId int [null]
+  sFinanceTypeCode varchar [null]
+  cMinFinanceAmount money [null]
+  cMaxFinanceAmount money [null]
+  cMaxVehicleCost money [null]
+  nBenefitLimitPercentage decimal [null]
+  cInsuranceDeductibleLimit money [null]
+  nVehiclePriceFinanceRatio decimal [null]
+  nMaxAPR decimal [null]
+  btGapTermSameAsFinance bit [null]
+  cSuggestedRetailCost money [null]
+  cMaxMSRP money [null]
+  iProductTypeId1 int [null]
+  sReferenceCode varchar [null]
+  iMenuSortIndex int [null]
+  sExternalName nvarchar [null]
+  sPlanGroupCode nvarchar [null]
+  btUseExternalContractPdf bit
+  btDeductibleVaries bit
+  iVehicleClassificationId int
+  VehicleClassificationProfileCode nvarchar [null]
+  VehicleClassificationDesc nvarchar [null]
+  iEligibilityTierId int
+  EligibilityTiersRuleName varchar [null]
+  EligibilityTiersDesc varchar [null]
+  btTransferAllowed bit
+  cTransferFee money
+  iTaxProfileId int
+  iCoverageCategoryId int [null]
+  btRegulatedRetail bit [null]
+  btDiscountable bit [null]
+  cMinimumMarkup money [null]
+  cMaximumMarkup money [null]
+  iCoverageGroupId int [null]
+  sInsurerType varchar [null]
+  iInsurerId int [null]
+  sDOP char [null]
+  sPlanType varchar [null]
+  sEffectiveBasedOn varchar [null]
+  sCondition char [null]
+  iExclusionDays int [null]
+  sServiceLocation varchar [null]
+  sMSRP char [null]
+  cMinimumMSRP money [null]
+  cMaximumMSRP money [null]
+  sPaymentModal char [null]
+  iCancellationRuleId int
+  sTransferRule nvarchar [null]
+  iMaxNumberOfTransfers int [null]
+  iMaxProducts int
+  sEffectiveDateTypeCode varchar [null]
+  sExpireOdomTypeCode varchar [null]
+  sEffectiveOdomTypeCode varchar [null]
+  iEffectiveOdomLag int [null]
+  iCoverageReportGroupId int [null]
+  sEffectiveDateLagBy nvarchar [null]
+  sVehicleCategoryType varchar [null]
+  bInResetEarningId bit
+  bInspectionRequired bit [null]
+  iMileageCutOff int [null]
+  sManufacWarrantyEligible varchar [null]
+  cMinimumRetail money [null]
+  cMaximumRetail money [null]
+  iMinNumberServBalloon int [null]
+  iMinNumberServLease int [null]
+  iMinNumberServLoan int [null]
+  iMinNumberServCash int [null]
+  bNotCancellable bit
+  bCancellableOnlyByAdmin bit
+  btRegulatedRetailNotRR bit [null]
+  cClaimLimitPerContract money
+  bClaimVehiclePurchasePrice bit
+  bClaimFinancedAmount bit
+  sClaimWhicheverIs char [null]
+  btMaxMarkupOnMarkupProfile bit
+  nBenefitLimitPercentageClaim decimal
+  cMinMSRP money [null]
+  sMinimumRetailCondition nvarchar [null]
+  cMinimumRetailPercentage decimal [null]
+  sMinimumRetailTypeCode nvarchar [null]
+  sMaximumRetailCondition nvarchar [null]
+  cMaximumRetailPercentage decimal [null]
+  sMaximumRetailTypeCode nvarchar [null]
+  cMaxCoveredInsuranceDeductible money
+  nMsrpNadaLoss decimal
+  iTermMax int [null]
+  btIncludeTaxesPayable bit
+  btFirstPaymentRequirement bit
+  btRideshareNotCovered bit
+  bOnlySoldInBundle bit
+  bOnlySoldAsUpgrade bit
+}
+
